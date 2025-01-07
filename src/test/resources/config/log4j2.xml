@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+        <!-- Console Appender -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d [%t] %-5level: %msg%n%throwable" />
+        </Console>
+
+        <!-- File Appender for detailed logs -->
+        <File name="File" fileName="logs/test-automation.log" append="true">
+            <PatternLayout pattern="%d [%t] %-5level: %msg%n%throwable" />
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="File" />
+        </Root>
+    </Loggers>
+</Configuration>

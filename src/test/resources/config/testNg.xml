@@ -1,0 +1,31 @@
+<suite name="CrossPlatformSuite" parallel="tests" thread-count="3">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg" />
+    </listeners>
+    <test name="Chrome Test">
+        <parameter name="platform" value="WEB"/>
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.ExecutorTest.PurchaseTest"/>
+        </classes>
+    </test>
+    <test name="Firefox Tests">
+        <parameter name="platform" value="WEB"/>
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="com.ExecutorTest.PurchaseTest"/>
+        </classes>
+    </test>
+  <!--  <test name="MobileAndroidTest">
+        <parameter name="platform" value="MOBILE_ANDROID"/>
+        <classes>
+            <class name="com.ExecutorTest.PurchaseTest"/>
+        </classes>
+    </test>-->
+   <!-- <test name="MobileIOSTest">
+        <parameter name="platform" value="MOBILE_IOS"/>
+        <classes>
+            <class name="com.ExecutorTest.PurchaseTest"/>
+        </classes>
+    </test>-->
+</suite>
